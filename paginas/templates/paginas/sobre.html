@@ -1,0 +1,32 @@
+{% extends "paginas/modelos/index.html"%}
+
+{% load static %}
+<head></head>
+
+<body>
+    {% block content %}
+		<h1 class="mb-4">Sobre o sistema</h1>
+		<p>Este sistema objetiva informatizar o gerenciamento de grupos de servidores do altar (acólitos, coroinhas e cerimoniários), no âmbito da organização e movimentação de membros (cadastro e atualização dos dados) e escalas.</p>
+		<p>Este projeto está sendo desenvolvido pela discente Carla Santos de Oliveira, do 4º ano do curso de Bacharelado em Engenharia de Software do IFPR Campus Paranavaí.</p>
+		<p>O desenvolvimento deste site é parte do processo avaliativo da disciplina de Novas Aplicações em Engenharia de Software.</p>
+		<div class="container">	
+		<div class="row">
+			<div class="col-md-6">
+				<div class="diagram-container">
+					<h2>Diagrama de classes</h2>
+					<img src="{% static 'diagrams/diagramClass.png' %}" alt="Diagrama de Classes" class="img-fluid" style="margin: 15px;">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="diagram-container">
+					<h2>Diagrama de Caso de Uso</h2>
+					<img src="{% static 'diagrams/diagramUseCase.png' %}" alt="Diagrama de Caso de uso" class="img-fluid" style="margin: 15px;">
+				</div>
+			</div>
+		</div>
+	</div>
+    {% endblock %}
+		
+</body>
+
+<style></style>

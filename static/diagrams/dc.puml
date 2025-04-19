@@ -1,0 +1,75 @@
+@startuml
+class Membro {
+  nome: String
+  resumo: String
+  data_nascimento: Date
+  telefone: String
+  endereco: String
+  nome_pai: String
+  nome_mae: String
+  sacramentos_recebidos: String
+  atuacao_pastorais: String
+  disponibilidade: Disponibilidade
+  situacao: Situacao
+  indice_comprometimento: IndiceComprometimento
+  grupo: Grupo
+  turma: Turma
+  funcao: Funcao
+  user: User
+}
+
+class Grupo {
+  nome: String
+  padroeiro: String
+  quantidade_membros: Integer
+}
+
+class Turma {
+  data_investidura: Date
+}
+
+class Funcao{
+	funcao: String
+	descricao: String
+}
+
+class Disponibilidade{
+	dia_semana: String
+}
+
+class Situacao{
+	situacao: String
+	descricao: String
+}
+
+class IndiceComprometimento{
+	indice: String
+	descricao: String
+}
+
+class User {
+	nome: String
+	email: String
+	senha: String
+}	
+
+class Atualizacao{
+	data_atualizacao: Date
+}
+
+class AtualizacaoMembro{
+	data_atualizacao: Atualizacao
+	membro: Membro
+}
+
+Membro "1..*" --up-- "1" Grupo
+Membro "1..*" --up-- "1" Turma
+Membro "0..*" --up-- "1" Funcao
+Membro "*"-left- "*" Disponibilidade
+Membro "1" --down-- "0..*" Situacao
+Membro "0..*" --down-- "1" IndiceComprometimento
+Membro "1" -right- "1" User
+Membro "1" -down- "0..*" AtualizacaoMembro
+AtualizacaoMembro "0..*" -up- "1" Atualizacao
+
+@enduml

@@ -1,0 +1,52 @@
+@startuml
+left to right direction
+
+actor "Coordenador" as Coord
+actor "Membro" as Membro
+
+rectangle "Sistema" {
+  
+  usecase "Realizar Login" as UCLogin
+  
+  package "Gerenciamento" {
+    usecase "Gerenciar Membros" as UC1
+    usecase "Gerenciar Funções" as UC2
+    usecase "Gerenciar Turmas" as UC3
+    usecase "Gerenciar Disponibilidades" as UC4
+    usecase "Gerenciar Atualizações" as UC5
+    usecase "Gerenciar Situação" as UC6
+    usecase "Gerenciar Índice de Comprometimento" as UC7
+    usecase "Gerenciar Grupos" as UC8
+  }
+
+  package "Perfil do Membro" {
+    usecase "Solicitar alteração de disponibilidade" as UC9
+    usecase "Editar dados de endereço e contato" as UC10
+  }
+}
+
+' Atores conectados aos seus casos de uso
+Coord --> UC1
+Coord --> UC2
+Coord --> UC3
+Coord --> UC4
+Coord --> UC5
+Coord --> UC6
+Coord --> UC7
+Coord --> UC8
+
+UC9 <-- Membro
+UC10 <-- Membro
+
+' Includes de login
+UC1 --> UCLogin : <<include>>
+UC2 --> UCLogin : <<include>>
+UC3 --> UCLogin : <<include>>
+UC4 --> UCLogin : <<include>>
+UC5 --> UCLogin : <<include>>
+UC6 --> UCLogin : <<include>>
+UC7 --> UCLogin : <<include>>
+UC8 --> UCLogin : <<include>>
+UC9 --> UCLogin : <<include>>
+UC10 --> UCLogin : <<include>>
+@enduml

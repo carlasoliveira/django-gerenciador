@@ -1,0 +1,14 @@
+*.sqlite3
+*/__pycache__
+*.sass-cache
+*.log
+*.DS_Store
+*.egg-info
+*.egg
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite
+*.png
+*.jpg
