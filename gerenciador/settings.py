@@ -38,12 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+	'paginas.apps.PaginasConfig',
+	'cadastros.apps.CadastrosConfig',
+
 	'crispy_forms',
-
-    'paginas.apps.PaginasConfig',
-	'cadastros.apps.CadastrosConfig'
+	'crispy_bootstrap4',
 ]
-
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap4'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [

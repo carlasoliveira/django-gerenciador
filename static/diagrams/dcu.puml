@@ -17,6 +17,7 @@ rectangle "Sistema" {
     usecase "Gerenciar Situação" as UC6
     usecase "Gerenciar Índice de Comprometimento" as UC7
     usecase "Gerenciar Grupos" as UC8
+	usecase "Gerenciar Atuação em Pastorais" as UC11
   }
 
   package "Perfil do Membro" {
@@ -34,6 +35,7 @@ Coord --> UC5
 Coord --> UC6
 Coord --> UC7
 Coord --> UC8
+Coord --> UC11
 
 UC9 <-- Membro
 UC10 <-- Membro

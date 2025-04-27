@@ -2,18 +2,40 @@
 
 {% load static %} 
 
-<!--{% load crispy_forms_tags %}-->
+{% load crispy_forms_tags %}
 
 {% block content %}
 
-<form method="POST">
+<div class="mb-4">
+    <h4 class="display-6 mb-4">
+        <span class="text-gradient d-inline">
+            {{ title }}
+        </span>
+    </h4>
+</div>
 
-	{% csrf_token %}
+<div class="row mb-4">
 
-	{{ form.as_p }}
+    <div class="col-lg-6 col-md-10 col-sm-12">
 
-	<button type="submit" class="btn btn-success">Cadastrar</button>
-</form>
+        <div class="fs-5 fw-light text-muted">
+            *Campos obrigatórios
+        </div>
 
-</form>
+
+		<form action="" method="POST">
+
+		{% csrf_token %}
+
+		{{ form | crispy }}
+
+		<p>
+			<button type="submit" class="btn btn-success">Cadastrar</button>
+		</p>
+
+		</form>
+
+	</div>
+
+</div>
 {% endblock %}
