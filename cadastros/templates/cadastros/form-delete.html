@@ -19,17 +19,20 @@
     <div class="col-lg-6 col-md-10 col-sm-12">
 
         <div class="fs-5 fw-light text-muted">
-            *Campos obrigatórios
+            Confirme para excluir o registro.
         </div>
 
+
 		<form action="" method="POST">
+
+		<p>Deseja excluir o registro <b>{{ object }}</b>?</p>
 
 		{% csrf_token %}
 
 		{{ form | crispy }}
 
 		<p>
-			<button type="submit" class="btn btn-success">Cadastrar</button>
+			<button type="submit" class="btn btn-danger">Excluir</button>
 		</p>
 
 		</form>

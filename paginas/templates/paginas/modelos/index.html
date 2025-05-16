@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-		
+	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="static/css/style.css">
 		<style>
@@ -35,7 +36,7 @@
             <a href={% url 'index' %}><span class="fa fa-home"></span> Início</a>
           </li>
           <li>
-              <a href="#"><span class="fa fa-users"></span> Grupos</a>
+              <a href={% url 'listar-grupo'%}><span class="fa fa-users"></span> Grupos</a>
           </li>
           <li>	
             <a href="#"><span class="fa fa-user"></span> Membros</a>

@@ -93,6 +93,12 @@ class Pastoral(models.Model):
 		verbose_name_plural = "Pastorais"
 		ordering = ['nome']
 
+class Sacramentos(models.TextChoices):
+		BATISMO = 'B', 'Somente o Batismo'
+		EUCARISTIA = 'E', 'Somente a Eucaristia'
+		BATISMO_EUCARISTIA = 'BE', 'Batismo e Eucaristia'
+		TODOS = 'T', 'Todos concluídos'
+
 class Membro(models.Model):
 	nome = models.CharField(max_length=100, verbose_name="nome")
 	resumo = models.TextField(max_length=300, verbose_name="resumo", blank=True, null=True)
@@ -101,11 +107,6 @@ class Membro(models.Model):
 	endereco = models.CharField(max_length=200, verbose_name="endereço", blank=True, null=True)
 	nome_pai = models.CharField(max_length=100, verbose_name="nome do pai", blank=True, null=True)
 	nome_mae = models.CharField(max_length=100, verbose_name="nome da mãe", blank=True, null=True)
-	class Sacramentos(models.TextChoices):
-		BATISMO = 'B', 'Somente o Batismo'
-		EUCARISTIA = 'E', 'Somente a Eucaristia'
-		BATISMO_EUCARISTIA = 'BE', 'Batismo e Eucaristia'
-		TODOS = 'T', 'Todos concluídos'
 	sacramentos = models.CharField(max_length=2, choices=Sacramentos.choices, default=Sacramentos.TODOS, verbose_name="Sacramentos de Iniciação Cristã")
 	atuacao_pastorais = models.ForeignKey(Pastoral, on_delete=models.PROTECT,  verbose_name="atuações em pastorais")
 	grupo = models.ForeignKey(Grupo, on_delete=models.PROTECT, verbose_name="grupo")

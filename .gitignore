@@ -12,3 +12,5 @@
 *.sqlite
 *.png
 *.jpg
+*.json
+*.svg
