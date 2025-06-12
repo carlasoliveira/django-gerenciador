@@ -1,8 +1,8 @@
 from django.urls import path, include
 from .views import GrupoCreate, TurmaCreate, FuncaoCreate, DisponibilidadeCreate, SituacaoCreate, IndiceComprometimentoCreate, PastoralCreate, MembroCreate, AtualizacaoMembroCreate
-from .views import GrupoUpdate, TurmaUpdate, FuncaoUpdate, DisponibilidadeUpdate, SituacaoUpdate, IndiceComprometimentoUpdate, PastoralUpdate
-from .views import GrupoDelete, TurmaDelete, FuncaoDelete, DisponibilidadeDelete, SituacaoDelete, IndiceComprometimentoDelete, PastoralDelete
-from .views import GrupoList
+from .views import GrupoUpdate, TurmaUpdate, FuncaoUpdate, DisponibilidadeUpdate, SituacaoUpdate, IndiceComprometimentoUpdate, PastoralUpdate, MembroUpdate, AtualizacaoMembroUpdate
+from .views import GrupoDelete, TurmaDelete, FuncaoDelete, DisponibilidadeDelete, SituacaoDelete, IndiceComprometimentoDelete, PastoralDelete, MembroDelete, AtualizacaoMembroDelete
+from .views import GrupoList, TurmaList, FuncaoList, DisponibilidadeList, SituacaoList, IndiceComprometimentoList, PastoralList, MembroList
 from django.views.generic import TemplateView
 
 
@@ -26,6 +26,8 @@ urlpatterns = [
 	path('editar/situacao/<int:pk>/', SituacaoUpdate.as_view(), name="editar-situacao"),
 	path('editar/indice-comprometimento/<int:pk>/', IndiceComprometimentoUpdate.as_view(), name="editar-indice-comprometimento"),
 	path('editar/pastoral/<int:pk>/', PastoralUpdate.as_view(), name="editar-pastoral"),
+	path('editar/membro/<int:pk>/', MembroUpdate.as_view(), name="editar-membro"),
+	path('editar/atualizacao/<int:pk>/', AtualizacaoMembroUpdate.as_view(), name="editar-atualizacao"),
 
 	##### DeleteView URLs
 	path('excluir/grupo/<int:pk>/', GrupoDelete.as_view(), name="deletar-grupo"),
@@ -35,7 +37,16 @@ urlpatterns = [
 	path('excluir/situacao/<int:pk>/', SituacaoDelete.as_view(), name="deletar-situacao"),
 	path('excluir/indice-comprometimento/<int:pk>/', IndiceComprometimentoDelete.as_view(), name="deletar-indice-comprometimento"),
 	path('excluir/pastoral/<int:pk>/', PastoralDelete.as_view(), name="deletar-pastoral"),
+	path('excluir/membro/<int:pk>/', MembroDelete.as_view(), name="deletar-membro"),
+	path('excluir/atualizacao/<int:pk>/', AtualizacaoMembroDelete.as_view(), name="deletar-atualizacao"),
 
 	##### ListView URLs
 	path('listar/grupos/', GrupoList.as_view(), name="listar-grupo"),
+	path('listar/pastorais', PastoralList.as_view(), name="listar-pastoral"),
+	path('listar/turmas/', TurmaList.as_view(), name="listar-turma"),
+	path('listar/funcoes/', FuncaoList.as_view(), name="listar-funcao"),
+	path('listar/disponibilidades/', DisponibilidadeList.as_view(), name="listar-disponibilidade"),
+	path('listar/situacoes/', SituacaoList.as_view(), name="listar-situacao"),
+	path('listar/indices-comprometimento/', IndiceComprometimentoList.as_view(), name="listar-indice-comprometimento"),
+	path('listar/membros/', MembroList.as_view(), name="listar-membro"),
 ]

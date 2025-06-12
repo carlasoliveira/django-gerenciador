@@ -9,7 +9,7 @@
 <div class="mb-4">
     <h4 class="display-6 mb-4">
         <span class="text-gradient d-inline">
-            Grupos cadastrados
+            Funções cadastradas
         </span>
     </h4>
 </div>
@@ -29,12 +29,12 @@
 				<tr>
 					<td>{{ object.nome }}</td>
 					<td><a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a></td>
-					<td><a href={% url 'editar-grupo' object.pk %} class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a></td>
-					<td><a href={% url 'deletar-grupo' object.pk %} class="btn btn-danger"><i class="fa-solid fa-trash"></i></a></td>
+					<td><a href={% url 'editar-funcao' object.pk %} class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a></td>
+					<td><a href={% url 'deletar-funcao' object.pk %} class="btn btn-danger"><i class="fa-solid fa-trash"></i></a></td>
 
 				{% empty %}
 				<tr>
-					<td colspan="2" class="text-center">Nenhum grupo cadastrado</td>
+					<td colspan="2" class="text-center">Nenhuma pastoral cadastrada</td>
 					<td></td>
 				</tr>
 

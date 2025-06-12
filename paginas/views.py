@@ -12,3 +12,6 @@ class PaginaInicial(TemplateView):
     
 class SobreView(TemplateView):
     template_name = "paginas/sobre.html"
+    
+class CadastrosView(TemplateView):
+	template_name = "paginas/cadastros.html"
