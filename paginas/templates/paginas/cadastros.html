@@ -4,35 +4,64 @@
 
 {% block content %}
   <h1 class="mb-4">Cadastros</h1>
-  <div class="container text-center">
-  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-  </div>
-</div>
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-6 mt-4">
+				<div class="card text-center">
+					<div class="card-body">
+						<h5 class="card-title">Grupo</h5>
+						<a href={% url 'cadastrar-grupo' %} class="btn btn-primary rounded-circle">+</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-6 mt-4">
+				<div class="card text-center">
+					<div class="card-body">
+						<h5 class="card-title">Turma</h5>
+						<a href={% url 'cadastrar-turma' %} class="btn btn-primary rounded-circle">+</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-6 mt-4">
+				<div class="card text-center">
+					<div class="card-body">
+						<h5 class="card-title">Função</h5>
+						<a href={% url 'cadastrar-funcao' %} class="btn btn-primary rounded-circle">+</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-6 mt-4">
+				<div class="card text-center">
+					<div class="card-body">
+						<h5 class="card-title">Disponibilidade</h5>
+						<a href={% url 'cadastrar-disponibilidade' %} class="btn btn-primary rounded-circle">+</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-6 mt-4">
+				<div class="card text-center">
+					<div class="card-body">
+						<h5 class="card-title">Situação</h5>
+						<a href={% url 'cadastrar-situacao' %} class="btn btn-primary rounded-circle">+</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-6 mt-4">
+				<div class="card text-center">
+					<div class="card-body">
+						<h5 class="card-title">Índice de Comprometimento</h5>
+						<a href={% url 'cadastrar-indice-comprometimento' %} class="btn btn-primary rounded-circle">+</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-6 mt-4">
+				<div class="card text-center">
+					<div class="card-body">
+						<h5 class="card-title">Pastoral</h5>
+						<a href={% url 'cadastrar-pastoral' %} class="btn btn-primary rounded-circle">+</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
