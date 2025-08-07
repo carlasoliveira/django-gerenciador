@@ -8,8 +8,6 @@
 *.pyo
 *.pyd
 *.db
-*.sqlite
-*.png
 *.jpg
 *.json
 *.svg
